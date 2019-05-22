@@ -66,9 +66,6 @@ if __name__ == '__main__':
         if 'open youtube' in query:
             speak('okay')
             webbrowser.open('www.youtube.com')
-        elif 'open porn' in query:
-            speak('okay')
-            webbrowser.open('www.pornhub.com')
 
         elif 'open google' in query:
             speak('okay')
