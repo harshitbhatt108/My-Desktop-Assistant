@@ -8,6 +8,7 @@ import datetime
 import wolframalpha
 import os
 import sys
+from tkinter import*
 
 engine = pyttsx3.init('sapi5')
 
@@ -24,17 +25,17 @@ def speak(audio):
 def greetMe():
     currentH = int(datetime.datetime.now().hour)
     if currentH >= 0 and currentH < 12:
-        speak('Good Morning!')
+        speak('Good Morning! Open your eyes and embrace this beautiful world')
 
     if currentH >= 12 and currentH < 18:
-        speak('Good Afternoon!')
+        speak('Good Afternoon! I wish every second of your life is beautiful this afternoon')
 
     if currentH >= 18 and currentH !=0:
-        speak('Good Evening!')
+        speak('Good Evening! May the beautiful evening sun photobombs all the selfies you take.')
 
 greetMe()
 
-speak('Hello Sir, I am your digital assistant Tweety.')
+speak('Hi There!, I am your digital assistant Zera.')
 speak('How may I help you?')
 
 
@@ -50,7 +51,7 @@ def myCommand():
         print('User: ' + query + '\n')
         
     except sr.UnknownValueError:
-        speak('Sorry sir! I didn\'t get that! Try typing the command!')
+        speak('I beg you pardon! I didn\'t get that! Please try typing the command!')
         query = str(input('Command: '))
 
     return query
@@ -76,7 +77,7 @@ if __name__ == '__main__':
             webbrowser.open('www.gmail.com')
 
         elif "what\'s up" in query or 'how are you' in query:
-            stMsgs = ['Just doing my thing!', 'I am fine!', 'Nice!', 'I am nice and full of energy']
+            stMsgs = ['Just doing my thing!', 'I am fine!', 'Nice!', 'I am nice and full of energy','Iam as good as you are, Thank you']
             speak(random.choice(stMsgs))
 
         elif 'email' in query:
